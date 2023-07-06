@@ -7,7 +7,7 @@ const path = input[3];
 
 
 request(url, (error, response, body) => {
-  if (error) return console.log(error);
+  if (error) return console.log(`Error: ${error.message}`);
 
   console.log(`Response Received: ${response.statusCode}`);
   writeToFile(path, body, (result) => {
